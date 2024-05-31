@@ -9,7 +9,16 @@ import (
 )
 
 func Test_01(t *testing.T) {
+	erapse.SetGlobalIsShow(false)
 	err := test_a()
+	cp.Compare(t, err, nil)
+
+	erapse.SetGlobalIsShow(true)
+	err = test_a()
+	cp.Compare(t, err, nil)
+
+	erapse.SetGlobalIsShow(false)
+	err = test_a()
 	cp.Compare(t, err, nil)
 }
 

@@ -30,4 +30,4 @@ I'm sure there are many other typos and grammatical errors in the document I wro
 
 ## history
 - 2020.07.06 created from scratch
-- 2024.05.31 add test
+- 2024.05.31 add test, IsShow
