@@ -27,5 +27,5 @@ Due to my mother language being Japanese which doesn't have a difference in pron
 **C++** version is available at https://github.com/UedaTakeyuki/elapse.
 
 ## history
-2020.07.06 created from scratch
-2024.05.31 add test
+- 2020.07.06 created from scratch
+- 2024.05.31 add test
