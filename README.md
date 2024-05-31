@@ -21,7 +21,9 @@ eraps main.DoSomething: 1896985 μs
 ```
 
 ## By the way, why is "erapse" spelt R? Why not L of "elapse"?
-Due to my mother language being Japanese which doesn't have a difference in pronunciation between **R** and **L**, I carelessly misspelt. ^^; By the time I noticed the mistake, I had already used it a lot, so it was hard to correct the spelling now, so I thought it was okay and left it as is. I'm sure there are many other typos and grammatical errors in the document I wrote, so please feel free to point them out. Thx!
+Due to my mother language being Japanese which doesn't have a difference in pronunciation between **R** and **L**, I carelessly misspelt it. ^^;
+By the time I noticed the mistake, I had already used it a lot, so it was hard to correct the spelling now, so I thought it was okay and left it as is.
+I'm sure there are many other typos and grammatical errors in the document I wrote, so please feel free to point them out. Thx!
 
 ## for other language
 **C++** version is available at https://github.com/UedaTakeyuki/elapse.
