@@ -20,6 +20,12 @@ The result is as follows:
 eraps main.DoSomething: 1896985 μs
 ```
 
+## Measurement error
+On **Intel PC**, The **ShowErapsedTIme** itself consumes **several microseconds**.  
+On **RPi**, this consumes **several tens of microseconds**.  
+
+See the ``go test -v -run Test_04`` under the **test** folder for more details.
+
 ## By the way, why is "erapse" spelt R? Why not L of "elapse"?
 Due to my mother language being Japanese which doesn't have a difference in pronunciation between **R** and **L**, I carelessly misspelt it. ^^;
 By the time I noticed the mistake, I had already used it a lot, so it was hard to correct the spelling now, so I thought it was okay and left it as is.
