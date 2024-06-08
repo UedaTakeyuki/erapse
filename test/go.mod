@@ -1,6 +1,6 @@
 module github.com/UedaTakeyuki/erapse/test
 
-go 1.21.0
+go 1.21
 
 replace local.packages/erapse => ../../erapse
 
