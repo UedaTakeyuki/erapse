@@ -1,6 +1,9 @@
 package erapse
 
 import (
+	"log"
+	"reflect"
+	"runtime"
 	"testing"
 	"time"
 
@@ -23,11 +26,53 @@ func Test_01(t *testing.T) {
 	erapse.SetGlobalIsShow(false)
 	err = test_a()
 	cp.Compare(t, err, nil)
+
+	test_b()
+	test_c()
+	test_d()
+	test_e()
+	test_f()
+	test_fμ()
 }
 
 func test_a() (err error) {
 	defer erapse.ShowErapsedTIme(time.Now())
 	return
+}
+
+func test_b() {
+	start := time.Now()
+	defer log.Printf("test_b %d ns\n", time.Now().Sub(start).Nanoseconds())
+}
+
+func test_c() {
+	start := time.Now()
+	_ /*pc */, file /*file*/, _ /*line*/, _ := runtime.Caller(0)
+	defer log.Printf(" eraps %s: %d ns\n", file, time.Now().Sub(start).Nanoseconds())
+}
+
+func test_d() {
+	start := time.Now()
+	pc /*pc */, _ /*file*/, _ /*line*/, _ := runtime.Caller(0)
+	name := runtime.FuncForPC(pc).Name()
+	defer log.Printf(" eraps %s: %d ns\n", name, time.Now().Sub(start).Nanoseconds())
+}
+
+func test_e() {
+	start := time.Now()
+	rv := reflect.ValueOf(test_e)
+	name := runtime.FuncForPC(rv.Pointer()).Name()
+	defer log.Printf(" eraps %s: %d ns\n", name, time.Now().Sub(start).Nanoseconds())
+}
+
+func test_f() {
+	start := time.Now()
+	log.Printf(" eraps %s: %d ns\n", "no defer", time.Now().Sub(start).Nanoseconds())
+}
+
+func test_fμ() {
+	start := time.Now()
+	log.Printf(" eraps %s: %d μs\n", "no defer", time.Now().Sub(start).Microseconds())
 }
 
 // Test global variable of the module which is imported multiplly from different package

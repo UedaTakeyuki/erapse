@@ -27,3 +27,12 @@ func ShowErapsedTIme(start time.Time) {
 		log.Printf("eraps %s: %d μs\n", f.Name(), time.Now().Sub(start).Microseconds())
 	}
 }
+
+func ShowElapsedTIme(start time.Time, isShow bool) {
+	if IsShow && isShow {
+		pc, _ /*file*/, _ /*line*/, _ := runtime.Caller(1) // 1: caller function
+		f := runtime.FuncForPC(pc)                         // refrection for caller function
+
+		log.Printf("eraps %s: %d μs\n", f.Name(), time.Now().Sub(start).Microseconds())
+	}
+}
